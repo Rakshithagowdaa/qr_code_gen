@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 50px; }
+        input { width: 300px; padding: 10px; }
+        button { padding: 10px 20px; }
+    </style>
+</head>
+<body>
+    <h1>Generate a QR Code</h1>
+    <form action="/generate_qr" method="POST" enctype="multipart/form-data" target="_blank">
+        <label for="link">Enter a URL (optional):</label><br>
+        <input type="text" id="link" name="link" placeholder="Enter a URL">
+        <br><br>
+
+        <label for="file">Or Upload a File:</label><br>
+        <input type="file" id="file" name="file" accept="image/*,video/*,.pdf,.doc,.docx,.xlsx">
+        <br><br>
+
+        <button type="submit">Generate QR Code</button>
+    </form>
+</body>
+</html>
